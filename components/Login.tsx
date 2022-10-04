@@ -1,12 +1,18 @@
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, Pressable} from 'react-native';
-const Login = () => {
+import {Root} from '../App';
+type Props = NativeStackScreenProps<Root, 'Login'>;
+const Login = ({navigation}: Props) => {
   return (
     <View style={styles.view}>
       <Text style={styles.text}>Welcome User</Text>
       <TextInput style={styles.input} />
       <TextInput style={styles.input} />
-      <Pressable style={styles.loginbtn} android_ripple={{color: '#fff'}}>
+      <Pressable
+        style={styles.loginbtn}
+        android_ripple={{color: '#fff'}}
+        onPress={() => navigation.navigate('Counter')}>
         <Text style={styles.logintxt}>Login</Text>
       </Pressable>
     </View>
