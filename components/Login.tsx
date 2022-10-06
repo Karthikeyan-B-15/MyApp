@@ -12,7 +12,7 @@ const Login = ({navigation}: Props) => {
       <Pressable
         style={styles.loginbtn}
         android_ripple={{color: '#fff'}}
-        onPress={() => navigation.navigate('Counter')}>
+        onPress={() => navigation.navigate('Home')}>
         <Text style={styles.logintxt}>Login</Text>
       </Pressable>
     </View>

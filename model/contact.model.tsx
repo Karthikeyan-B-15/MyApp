@@ -1,3 +1,3 @@
 export interface Contact {
-  page: number;
+  data: any[];
 }
